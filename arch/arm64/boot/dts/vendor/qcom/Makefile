@@ -101,15 +101,20 @@ ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
                 bengal-rumi-overlay.dtbo \
                 bengal-qrd-overlay.dtbo \
                 bengal-idp-overlay.dtbo \
-                bengal-idp-usbc-overlay.dtbo
+                bengal-idp-usbc-overlay.dtbo \
+                citrus-bengal-idp-overlay.dtbo \
+                lime-bengal-idp-overlay.dtbo
 
 bengal-rumi-overlay.dtbo-base := bengal.dtb
 bengal-qrd-overlay.dtbo-base := bengal.dtb
 bengal-idp-overlay.dtbo-base := bengal.dtb
 bengal-idp-usbc-overlay.dtbo-base := bengal.dtb
+citrus-bengal-idp-overlay.dtbo-base := bengal.dtb
+lime-bengal-idp-overlay.dtbo-base := bengal.dtb
 else
-dtb-$(CONFIG_ARCH_BENGAL) += bengal-rumi.dtb \
-                bengal-qrd.dtb \
+dtb-$(CONFIG_ARCH_BENGAL) += \
+		bengal-rumi.dtb \
+		bengal-qrd.dtb \
 		bengal-idp.dtb \
 		bengal-idp-usbc.dtb
 endif
